@@ -119,6 +119,8 @@ class BACKUP {
         /* вот так устанавливаются параметры */
         $this->options(&$options);
         // so let's go
+        //не совсем понимаю смысл создания соединения внутри коструктора
+        //возможно стоит его выкинуть выше
         $this->link = mysql_connect($this->opt['host'], $this->opt['user'], $this->opt['pass']);
         $this->opt['base'] = mysql_real_escape_string($this->opt['base']);
         if (!mysql_select_db($this->opt['base'], $this->link)) {
