@@ -52,6 +52,11 @@ class BACKUP {
     /** @var string - sql|sql.gz - метод работы с файлами */
     private $method = 'file';
 
+    /**
+     * Метод логирования работы бэкапера
+     * @staticvar type $x
+     * @param String $message 
+     */
     private function log($message){
       /*<% if ($target!='allinone') { echo $target %>*/
         static $x;
